@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/deneme{name?}','DenemeController@index2');
+Route::get('test/{name}/surname/{surname}','DenemeController@index');
+
+Route::get('posts/{post}/comments/{comment}','DenemeController@test');
