@@ -6,13 +6,22 @@ use Illuminate\Http\Request;
 
 class DenemeController extends Controller
 {
-    public function index($name,$surname)
+    // public function index($name, $surname)
+    // {
+    //     echo $name . " " . $surname;
+    // }
+    // public function test($postId, $commentId)
+    // {
+    //     echo $postId . "" . $commentId;
+    // }
+
+    public function index()
     {
-        echo $name." ".$surname;
+      return view('home');
     }
-    public function test($postId, $commentId) {
-    echo $postId . "" .$commentId;
-}
- 
-    
+
+
+
+
+
 }
