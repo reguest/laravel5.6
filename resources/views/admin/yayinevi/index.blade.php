@@ -6,8 +6,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" data-background-color="purple">
-                        <h4 class="title">Simple Table</h4>
-                        <p class="category">Here is a subtitle for this table</p>
+                        <h4 class="title">Yayın Evleri</h4>
+                        <p class="category">Yayın evleri listesi</p>
                     </div>
                     <div class="card-content table-responsive">
                         <table class="table">
