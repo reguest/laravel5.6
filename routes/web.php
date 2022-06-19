@@ -1,33 +1,21 @@
 <?php
 
-
+use App\Http\Controllers\admin\kullanici\indexController;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
-Route::get('/kitaplar', function () {
 
-    //  $kitap =  App\Kitap::firstOrCreate(['isim'=> 'denmeekle3']); // varsa getiriri yoksa ekler
-    // dd($kitap);
-    // foreach($x as $key => $value){
-    //     echo $value['isim']."</br>";
-    // } // veri çekme
+Auth::routes();
 
-    //  $kitap->isim = "orhannn";
-    //  $kitap->save();
+Route::get('/home', 'HomeController@index')->name('home')->middleware(['YasKontrol']);
 
-    //$kitap->delete();
+Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
-    // $x =  \App\Kitap::find(1)->yazar->isim; 
-    // echo$x;
-
-    //hasMany id si 1 olan tüm ilişkili yazarları getirir
+    Route::get('/', 'indexController@index')->name('index');
     
-    
+    Route::group(['namespace'=>'yayinevi','prefix'=>'yayinevi','as'=>'yayinevi.']
+    ,function(){
+      Route::get('/','indexController@index')->name('index');
+    });
 
-
-
-});
-
-Route::get('/users', function () {
-    db::table('users')->where('id', '=', 6)->delete();  // toplpu veri ekleme
-    db::table('users')->truncate(); // tabloyu boşaltır
 });
