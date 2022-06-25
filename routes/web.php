@@ -9,13 +9,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware(['YasKontrol']);
 
-Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {  //admin kodları
 
     Route::get('/', 'indexController@index')->name('index');
     
     Route::group(['namespace'=>'yayinevi','prefix'=>'yayinevi','as'=>'yayinevi.']
     ,function(){
       Route::get('/','indexController@index')->name('index');
+      Route::get('/ekle', 'indexController@create')->name('ekle');
+      Route::post('/ekle', 'indexController@store')->name('create.post');
+      Route::get('/duzenle', 'indexController@edit')->name('edit');
+      Route::post('/duzenle{id}', 'indexController@update')->name('edit.post');
+      Route::get('/sil{id}', 'indexController@delete')->name('delete');
+
     });
 
-});
+});  //admin kodları
