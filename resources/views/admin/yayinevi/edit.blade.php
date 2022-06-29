@@ -32,7 +32,7 @@
 
                             </div>
 
-                            <button type="submit" class="btn btn-primary pull-right">Yayın evi ekle</button>
+                            <button type="submit" class="btn btn-primary pull-right">Yayın evi düzenle</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>

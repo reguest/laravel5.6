@@ -12,8 +12,8 @@ class indexController extends Controller
     public function index()
     {
         //
-        $data=YayinEvi::paginate(10);
-        return view('admin.yayinevi.index',['data'=>$data]);
+        $data = YayinEvi::paginate(10);
+        return view('admin.yayinevi.index', ['data' => $data]);
     }
     public function create()
     {
@@ -35,7 +35,36 @@ class indexController extends Controller
 
     public function edit($id)
     {
-        $data= YayinEvi::where('id', '=', $id)->get();
-        return view('admin.yayinevi.edit',['data'=>$data]);
+        $data = YayinEvi::where('id', '=', $id)->get();
+        return view('admin.yayinevi.edit', ['data' => $data]);
+    }
+    public function update(Request $request)
+    {
+        $id = $request->route('id');
+        $c = YayinEvi::where('id', '=', $id)->count();
+        if ($c != 0) {
+            $all = $request->except('_token');
+            $all['selflink'] = mHelper::permalink($all['name']);
+            $update = YayinEvi::where('id', '=', $id)->update($all);
+            if ($update) {
+                return redirect()->back()->with('status', 'Yayın evi düzenlendi');
+            } else {
+                return redirect()->back()->with('status', 'Yayın evi DÜZENLENEMEDİ');
+            }
+        } else {
+            return redirect('/');
+        }
+    }
+
+    public function DELETE($id)
+    {
+      
+        $c = YayinEvi::where('id', '=', $id)->count();
+        if ($c != 0) {
+            $delete = YayinEvi::where('id', "=",$id)->delete();
+            return redirect()->back();
+        } else {
+            return redirect('/');
+        }
     }
 }
