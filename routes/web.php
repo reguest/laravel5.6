@@ -18,8 +18,8 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], fu
       Route::get('/','indexController@index')->name('index');
       Route::get('/ekle', 'indexController@create')->name('ekle');
       Route::post('/ekle', 'indexController@store')->name('create.post');
-      Route::get('/duzenle', 'indexController@edit')->name('edit');
-      Route::post('/duzenle{id}', 'indexController@update')->name('edit.post');
+      Route::get('/duzenle/{id}', 'indexController@edit')->name('edit');
+      Route::post('/duzenle/{id}', 'indexController@update')->name('edit.post');
       Route::get('/sil{id}', 'indexController@delete')->name('delete');
 
     });

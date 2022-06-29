@@ -32,4 +32,10 @@ class indexController extends Controller
             return redirect()->back()->with('status', 'yayın evi HATA');
         }
     }
+
+    public function edit($id)
+    {
+        $data= YayinEvi::where('id', '=', $id)->get();
+        return view('admin.yayinevi.edit',['data'=>$data]);
+    }
 }
