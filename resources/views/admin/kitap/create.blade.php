@@ -56,7 +56,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group label-floating is-empty">
-                                       
+                                        
                                         <select name="yazarid" class="form-control" id="">
                                            @foreach($yazar as $key => $value)
                                            <option value="{{$value['id']}}"> {{$value['name']}}</option>
