@@ -85,8 +85,10 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="control-label">Açıklama</label>
-                                       text
+                                       
+                                       <textarea name="aciklama" id="" cols="30" rows="10" class="form-control">
+
+                                       </textarea>
                                         <span class="material-input"></span>
                                     </div>
                                 </div>
