@@ -86,7 +86,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label">Açıklama</label>
-                                        <input name="name" type="text" class="form-control">
+                                       text
                                         <span class="material-input"></span>
                                     </div>
                                 </div>
