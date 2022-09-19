@@ -86,6 +86,20 @@
                                 <div class="col-md-12">
                                     <div class="form-group label-floating is-empty">
                                        
+                                        <select name="kategoriid" class="form-control" id="">
+                                           @foreach($kategori as $key => $value)
+                                           <option value="{{$value['id']}}"> {{$value['name']}}</option>
+                                           @endforeach
+                                        </select>
+                                        <span class="material-input"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating is-empty">
+                                       
                                        <textarea name="aciklama" id="" cols="30" rows="10" class="form-control">
 
                                        </textarea>

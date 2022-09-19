@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKitapllarsTable extends Migration
+class CreateKategorilersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateKitapllarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kitapllars', function (Blueprint $table) {
+        Schema::create('kategorilers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('selflink');
-            $table->integer('yazarId');
-            $table->string('image');
-            $table->double('fiyat');
-            $table->text('aciklama')->nullable();  
-            $table->integer('kategoriid');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ class CreateKitapllarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kitapllars');
+        Schema::dropIfExists('kategorilers');
     }
 }
