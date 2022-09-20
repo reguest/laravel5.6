@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-md-12">
 
+            <a href="{{route('admin.kategori.create.post')}}" class="btn btn-success ">Yeni Kategori Ekle</a>
 
 
 

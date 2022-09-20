@@ -1,40 +1,40 @@
 <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
 
     <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text">
-            Creative Tim
+        <a href="{{route('admin.index')}}" class="simple-text">
+            Kitap Diyarı
         </a>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li class="active">
-                <a href="dashboard.html">
+                <a href="{{route('admin.index')}}">
                     <i class="material-icons">dashboard</i>
-                    <p>Dashboard</p>
+                    <p>Anasayfa</p>
                 </a>
             </li>
             <li>
-                <a href="./user.html">
+                <a href="{{route('admin.yayinevi.index')}}">
                     <i class="material-icons">person</i>
-                    <p>User Profile</p>
+                    <p>Yayin Evi</p>
                 </a>
             </li>
             <li>
-                <a href="./table.html">
+                <a href="{{route('admin.yazar.index')}}">
                     <i class="material-icons">content_paste</i>
-                    <p>Table List</p>
+                    <p>Yazarlar</p>
                 </a>
             </li>
             <li>
-                <a href="./typography.html">
+                <a href="{{route('admin.kategori.index')}}">
                     <i class="material-icons">library_books</i>
-                    <p>Typography</p>
+                    <p>Kategoriler</p>
                 </a>
             </li>
             <li>
-                <a href="./icons.html">
+                <a href="{{route('admin.kitap.index')}}">
                     <i class="material-icons">bubble_chart</i>
-                    <p>Icons</p>
+                    <p>Kitaplar</p>
                 </a>
             </li>
             <li>

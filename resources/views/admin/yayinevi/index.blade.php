@@ -4,6 +4,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
+            <a href="{{route('admin.yayinevi.create.post')}}" class="btn btn-success ">Yeni Kategori Ekle</a>
+
 
 
 
