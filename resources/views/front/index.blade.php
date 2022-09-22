@@ -93,7 +93,7 @@
 								alt="" /></a>
 						<div class="product-bottom">
 							<h3>{{ $value['name']}}</h3>
-							<p>Explore Now</p>
+							<p>{{\App\Yazarlar::getField($value['yazarid'],'name')}}</p>
 							<h4><a class="item_add" href="#"><i></i></a> <span class="item_price">{{ $value['fiyat']}}₺</span></h4>
 						</div>
 						
