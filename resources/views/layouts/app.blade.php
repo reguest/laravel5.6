@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Kitap diyarı</title>
 <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
-<script src="js/jquery-1.11.0.min.js')}}"></script>
+<script src="{{asset('js/jquery-1.11.0.min.js')}}"></script>
 <!--Custom-Theme-files-->
 <!--theme-style-->
 <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all" />	

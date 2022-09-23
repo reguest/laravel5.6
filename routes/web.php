@@ -51,7 +51,7 @@ Route::group(['namespace' => 'kategori', 'prefix' => 'kategori', 'as' => 'katego
 }
 );
 
-Route::group(['namespace' => 'slider', 'prefix' => 'slider', 'as' => 'slider.'],function () {
+Route::group(['namespace' => 'slider', 'prefix' => 'slider', 'as' => 'slider'],function () {
   Route::get('/', 'indexController@index')->name('index');
   Route::get('/ekle', 'indexController@create')->name('ekle');
   Route::post('/ekle', 'indexController@store')->name('create.post');

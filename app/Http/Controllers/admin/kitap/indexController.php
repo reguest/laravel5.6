@@ -64,34 +64,28 @@ class indexController extends Controller
             $data=Kitaplar::where('id', '=', $id)->get();
             $all =$request->except('_token');
             $all['selflink']=mHelper::permalink($all['name']);
-            $all['image']=imageUpload::singleUploadUpdate(rand(1,9000),"kitap",$request->file('image'),$data,"image");
-            $update = Kitaplar::where('id','=',$id)->update($all);
-            if($update){
-                return redirect()->back()->with('status','kitap başarı ile güncellendi');
-            }else {
-                return redirect()->back()->with('status','kitap GÜNCELLENEMEDİ');
+            $all['image']=imageUpload::singleUploadUpdate(rand(1, 9000), "kitap", $request->file('image'), $data, "image");
+            $update = Kitaplar::where('id', '=', $id)->update($all);
+            if ($update) {
+                return redirect()->back()->with('status', 'kitap başarı ile güncellendi');
+            } else {
+                return redirect()->back()->with('status', 'kitap GÜNCELLENEMEDİ');
             }
-           
         } else {
             return redirect('/');
         }
     }
 
-    public function delete($id){
-       
+    public function delete($id)
+    {
         $c=Kitaplar::where('id', '=', $id)->count();
         if ($c!=0) {
             $data=Kitaplar::where('id', '=', $id)->get();
-           File::delete('public/'.$data[0]['image']);
-           Kitaplar::where('id','=',$id)->delete();
-           return redirect()->back(); 
-
+            File::delete('public/'.$data[0]['image']);
+            Kitaplar::where('id', '=', $id)->delete();
+            return redirect()->back();
         } else {
             return redirect('/');
         }
     }
-
-
-
-
 }

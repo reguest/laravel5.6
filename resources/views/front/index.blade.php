@@ -7,22 +7,19 @@
 <div class="bnr" id="home">
 	<div id="top" class="callbacks_container">
 		<ul class="rslides" id="slider4">
+
+		@foreach(\App\Slider::all() as $key =>$value)
 			<li>
-				<img src="images/bnr-1.jpg" alt="" />
+				<img src="{{asset(\App\Helper\mHelper::largeImage($value['image']))}}" alt="" />
 			</li>
-			<li>
-				<img src="images/bnr-2.jpg" alt="" />
-			</li>
-			<li>
-				<img src="images/bnr-3.jpg" alt="" />
-			</li>
+			@endforeach
 		</ul>
 	</div>
 	<div class="clearfix"> </div>
 </div>
 <!--banner-ends-->
 <!--Slider-Starts-Here-->
-<script src="js/responsiveslides.min.js"></script>
+<script src="{{asset('js/responsiveslides.min.js')}}"></script>
 <script>
 	// You can also use "$(window).load(function() {"
 	$(function () {
