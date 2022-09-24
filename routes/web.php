@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 Auth::routes();
 
 Route::get('/', 'front\indexController@index')->name('index');
+Route::get('/kitap/detay/{selflink}', 'front\kitap\indexController@index')->name('kitap.detay');
 
 Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {  //admin kodları
     Route::get('/', 'indexController@index')->name('index');

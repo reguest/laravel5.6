@@ -168,7 +168,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</form>
 				</div>
 				<div class="col-md-6 footer-right">					
-					<p>© 2015 Luxury Watches. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+					<p>© 2022 Luxury Watches. All Rights Reserved | Design by  <a href="http://incecode.com/" target="_blank">İnce Code</a> </p>
 				</div>
 				<div class="clearfix"></div>
 			</div>

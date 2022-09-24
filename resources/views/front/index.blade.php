@@ -86,7 +86,7 @@
 			    @foreach($chunk as $key => $value)
 				<div class="col-md-3 product-left">
 					<div class="product-main simpleCart_shelfItem">
-						<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="{{asset($value['image'])}}"
+						<a href="{{ route('kitap.detay',['selflink'=>$value['selflink']]) }}" class="mask"><img class="img-responsive zoom-img" src="{{asset($value['image'])}}"
 								alt="" /></a>
 						<div class="product-bottom">
 							<h3>{{ $value['name']}}</h3>
@@ -104,7 +104,7 @@
 			<div class="product-one">
 				<div class="col-md-3 product-left">
 					<div class="product-main simpleCart_shelfItem">
-						<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-5.png"
+						<a href="{{ route('kitap.detay',['selflink'=>$value['selflink']]) }}" class="mask"><img class="img-responsive zoom-img" src="images/p-5.png"
 								alt="" /></a>
 						<div class="product-bottom">
 							<h3>Smart Watches</h3>
