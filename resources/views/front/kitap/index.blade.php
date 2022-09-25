@@ -11,6 +11,17 @@
 		</div>
 	</div>
 </div>
+
+@if(session('status'))
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="breadcrumbs-main">
+{{ session('status') }}
+</div>
+	</div>
+</div>
+@endif
+
 <!--end-breadcrumbs-->
 <!--start-single-->
 <div class="single contact">
@@ -70,7 +81,7 @@
 									<li>Yazar : {{ \App\Yazarlar::getField($data[0]['yazarid'],"name") }}</li>
 									<li>Kategori: {{ \App\Kategoriler::getField($data[0]['kategoriid'],"name") }}</li>
 
-									
+
 									<li class="size-in">Size<select>
 											<option>Large</option>
 											<option>Medium</option>
@@ -89,7 +100,7 @@
 									<span class="women1">: CK09</span>
 								</li>
 							</ul>
-							<a href="#" class="add-cart item_add">ADD TO CART</a>
+							<a href="{{route('basket.add' ,['id'=>$data[0]['id']])}}" class="add-cart item_add">SEPETE EKLE</a>
 
 						</div>
 					</div>
@@ -177,7 +188,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="clearfix"> </div>
 		</div>
 	</div>
