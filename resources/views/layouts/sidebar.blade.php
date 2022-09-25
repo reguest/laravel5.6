@@ -13,18 +13,18 @@
                     <p>Anasayfa</p>
                 </a>
             </li>
-            <li>
+             <li>
                 <a href="{{route('admin.yayinevi.index')}}">
                     <i class="material-icons">person</i>
                     <p>Yayin Evi</p>
                 </a>
-            </li>
-            <li>
+            </li> 
+           <li>
                 <a href="{{route('admin.yazar.index')}}">
                     <i class="material-icons">content_paste</i>
                     <p>Yazarlar</p>
                 </a>
-            </li>
+            </li>  
             <li>
                 <a href="{{route('admin.kategori.index')}}">
                     <i class="material-icons">library_books</i>
@@ -54,7 +54,7 @@
                     <i class="material-icons">unarchive</i>
                     <p>Upgrade to PRO</p>
                 </a>
-            </li>
+            </li> 
         </ul>
     </div>
 </div>

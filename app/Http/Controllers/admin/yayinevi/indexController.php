@@ -15,6 +15,8 @@ class indexController extends Controller
         $data = YayinEvi::paginate(10);
         return view('admin.yayinevi.index', ['data' => $data]);
     }
+
+
     public function create()
     {
         return view('admin.yayinevi.create');

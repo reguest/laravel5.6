@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin\kitap;
 
+use File;
 use App\Kitaplar;
 use App\Yazarlar;
 use App\YayinEvi;
@@ -9,7 +10,7 @@ use App\Helper\mHelper;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Helper\imageUpload;
-use File;
+
 use App\Kategoriler;
 
 class indexController extends Controller

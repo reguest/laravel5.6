@@ -5,10 +5,7 @@
         <div class="row">
             <div class="col-md-12">
 
-            <a href="{{route('admin.slider.create.post')}}" class="btn btn-success ">Yeni Slider Ekle</a>
-
-
-
+                <a href="{{route('admin.slider.create.post')}}" class="btn btn-success ">Yeni Slider Ekle</a>
 
                 <div class="card">
                     <div class="card-header" data-background-color="purple">
