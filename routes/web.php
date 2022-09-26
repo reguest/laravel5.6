@@ -10,6 +10,8 @@ Route::get('/', 'front\indexController@index')->name('index');
 Route::get('/kitap/detay/{selflink}', 'front\kitap\indexController@index')->name('kitap.detay');
 Route::get('/home', 'indexController@home')->name('home'); 
 Route::get('/basket/add/{id}', 'front\basket\indexController@add')->name('basket.add'); 
+Route::get('/basket', 'front\basket\indexController@index')->name('basket.index'); 
+Route::get('/basket/remove/{id}', 'front\basket\indexController@remove')->name('basket.remove'); 
 
 //admin kodları
 Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {

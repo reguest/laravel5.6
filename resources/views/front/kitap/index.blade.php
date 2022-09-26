@@ -16,8 +16,8 @@
 <div class="breadcrumbs">
 	<div class="container">
 		<div class="breadcrumbs-main">
-{{ session('status') }}
-</div>
+			{{ session('status') }}
+		</div>
 	</div>
 </div>
 @endif
