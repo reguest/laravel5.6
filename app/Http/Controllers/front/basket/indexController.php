@@ -7,13 +7,15 @@ use App\Kitaplar;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Helper\sepetHelper;
+use Illuminate\Support\Facades\Auth;
+use App\Order;
 
 class indexController extends Controller
 {
-
     public function index()
     {
-        //Session()->flush();
+        
+
         return view('front.basket.index');
     }
     public function add($id)
@@ -37,8 +39,38 @@ class indexController extends Controller
         return redirect()->back();
     }
 
-   
+    public function complete()
+    {
+       // Session::forget('basket');
+        if (sepetHelper::countData()!=0) {
+            return view('front.basket.complete');
+        } else {
+            return redirect('/');
+        }
+    }
 
+    public function completeStore(Request $request)
+    {
+        $request->validate(['adres'=>'required','telefon'=>'required']);
+        $adres= $request->input('adres');
+        $telefon= $request->input('telefon');
+        $mesaj= $request->input('mesaj');
+        $json=json_encode(sepetHelper::allList());
 
+        $array = [
+         'userId' =>Auth::id(),
+         'adres' =>$adres,
+         'telefon' =>$telefon,
+         'mesaj' =>$mesaj,
+         'json' =>$json
 
+        ];
+
+        $insert= Order::create($array);
+        if ($insert) {
+            return redirect()->back()->with('status', 'siparişiniz alındı');
+        } else {
+            return redirect()->back()->with('status', 'siparişiniz !!!ALINAMADI!!!');
+        }
+    }
 }

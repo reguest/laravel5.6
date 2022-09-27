@@ -21,7 +21,7 @@
         </div>
         <div class="ckeckout-top">
             <div class="cart-items">
-                <h3>Sepetim ({{\App\Helper\sepetHelper::countData() }})</h3>
+                <h3>Sepetim ({{\App\Helper\sepetHelper::countData() }} )</h3>
 
 
                 <div class="in-check">
@@ -48,6 +48,10 @@
                 </div>
             </div>
         </div>
+
+         <a href="{{ route('basket.complete') }}">Alışverişi Tamamla</a>
+        
+
     </div>
 </div>
 
