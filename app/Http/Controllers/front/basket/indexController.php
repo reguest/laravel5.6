@@ -73,4 +73,13 @@ class indexController extends Controller
             return redirect()->back()->with('status', 'siparişiniz !!!ALINAMADI!!!');
         }
     }
+
+    public function flush(){
+        Session::forget('basket');
+        return redirect('/');
+    }
+
+
+
+
 }

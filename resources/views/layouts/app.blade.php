@@ -85,8 +85,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<img src="{{asset('images/cart-1.png')}}" alt="" />
 						</a>
-						<!-- <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						<div class="clearfix"> </div> -->
+						 <p><a href="{{route('basket.flush')}}" class="simpleCart_empty">Sepeti Temizle</a></p>
+						<div class="clearfix"> </div> 
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -113,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="{{route('index')}}">Anasayfa</a></li>
 							@foreach(\App\Kategoriler::all() as $key => $value)
 
-							<li class="grid"><a href="typo.html">{{$value['name']}}</a></li>
+							<li class="grid"><a href="{{ route('cat',['selflink'=>$value['selflink']]) }}">{{$value['name']}}</a></li>
 							@endforeach
 
 							<li class="grid"><a href="#">Contact</a>
@@ -125,8 +125,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-3 header-right">
 					<div class="search-bar">
-						<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+						<form action="{{route('search')}}">
+						<input type="text" name="q" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 						<input type="submit" value="">
+						</form>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
