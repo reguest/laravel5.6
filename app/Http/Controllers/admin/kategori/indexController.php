@@ -4,8 +4,10 @@ namespace App\Http\Controllers\admin\kategori;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 use App\Kategoriler;
 use App\Helper\mHelper;
+
 
 class indexController extends Controller
 {
@@ -66,5 +68,9 @@ class indexController extends Controller
         } else {
             return redirect('/');
         }
+    }
+
+    public function getData(Request $request){
+        return DataTables::off(Kategoriler::query())->make(true);
     }
 }

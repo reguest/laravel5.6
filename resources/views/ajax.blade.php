@@ -8,5 +8,28 @@
 </head>
 <body>
     
+<!--
+   akıllı tablo için 
+
+   config/app.php içerisine ekle
+
+  KÜTÜPHANE: https://datatables.yajrabox.com/starter
+
+Add Datatables Service Provider and Facade on config/app.php.
+Yajra\Datatables\DatatablesServiceProvider::class,
+
+'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+
+composer require yajra/laravel-datatables-oracle -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<script>
+    
+</script>
+
+
 </body>
 </html>
