@@ -17,10 +17,12 @@ class CreateKitapllarsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('selflink');
-            $table->integer('yazarId');
+            $table->integer('yazarid');
             $table->string('image');
             $table->double('fiyat');
             $table->text('aciklama')->nullable();  
+           
+            $table->integer('kategoriid');
             $table->timestamps();
         });
     }

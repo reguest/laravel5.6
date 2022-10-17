@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Helper;
 
 class mHelper
 {
-
-    static function permalink($string)
+    public static function permalink($string)
     {
         $find = array("Ç", "Ş", "Ğ", "Ü", "İ", "Ö", "ç", "ş", "ğ", "ü", "ö", "ı", "+", "#");
         $replace = array("c", "s", "g", "u", "i", "o", "c", "s", "g", "u", "o", "i", "plus", "sharp");
@@ -15,6 +15,13 @@ class mHelper
         return $string;
     }
 
-
-
+    public static function largeImage($image)
+    {
+        $imageExplode = explode('/', $image);
+        $filename = end($imageExplode);
+        $key = key($imageExplode);
+        unset($imageExplode[$key]);
+        $implodeImage = implode('/',$imageExplode);
+        return $implodeImage."/large/".$filename;
+    }
 }

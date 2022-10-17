@@ -5,6 +5,9 @@
         <div class="row">
             <div class="col-md-12">
 
+            <a href="{{route('admin.yazar.create.post')}}" class="btn btn-success ">Yeni Kategori Ekle</a>
+
+
                 <div class="card">
                     <div class="card-header" data-background-color="purple">
                         <h4 class="title">Yazarlar</h4>
